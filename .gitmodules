@@ -1,0 +1,6 @@
+[submodule "lib/raphael"]
+	path = lib/raphael
+	url = https://github.com/DmitryBaranovskiy/raphael.git
+[submodule "tests/shoulda"]
+	path = tests/shoulda
+	url = https://github.com/philc/shoulda.js.git
