@@ -1,0 +1,1 @@
+ClassDiagramExtension = function() { this.tokens = ['class-diagram']; };

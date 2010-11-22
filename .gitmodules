@@ -1,6 +1,3 @@
 [submodule "lib/raphael"]
 	path = lib/raphael
 	url = https://github.com/DmitryBaranovskiy/raphael.git
-[submodule "tests/jspec"]
-	path = tests/jspec
-	url = https://github.com/visionmedia/jspec.git
