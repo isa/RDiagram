@@ -9,3 +9,7 @@ RDiagram is a diagram generator based on "RaphaelJS":http://raphaeljs.org. It ba
 h3. Running Tests
 
 First, make sure that you've installed jspec (tests/jspec) and "Mozilla Rhino":http://www.mozilla.org/rhino/download.html into your system.
+
+h3. Summary
+
+Hope you guys like it.
