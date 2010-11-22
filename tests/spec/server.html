@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="/jspec/jspec.js"></script>
+		<script src="/jspec/jspec.xhr.js"></script>
+		<script src="/lib/rdiagram.js"></script>
+		<script src="/lib/class-diagram.js"></script>
+		<script>
+			function runSuites() {
+				JSpec
+				.exec('unit/spec.js')
+				.exec('unit/spec.class-diagram.js')
+				.run({ reporter: JSpec.reporters.Server, verbose: true, failuresOnly: true, fixturePath: '/spec/fixtures' })
+				.report()
+			}
+		</script>
+	</head>
+	<body class="jspec" onLoad="runSuites();">
+	</body>
+</html>
