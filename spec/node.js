@@ -1,8 +1,8 @@
 
-require.paths.unshift('spec', '/Users/isa/.rvm/gems/ruby-1.9.2-p0/gems/jspec-4.3.3/lib', 'lib')
+require.paths.unshift('spec', './spec/lib', 'lib')
 require('jspec')
 require('rdiagram')
-require('class-diagram')
+require('extensions/class-diagram')
 
 JSpec
   .exec('spec/unit/spec.js')

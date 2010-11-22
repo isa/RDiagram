@@ -1,1 +1,0 @@
-../../extensions/class-diagram.js
