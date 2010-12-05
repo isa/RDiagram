@@ -1,6 +1,8 @@
 
 require.paths.unshift('spec', './spec/lib', 'lib')
 require('jspec')
+require('jshamcrest-min')
+require('jsmockito-min')
 require('rdiagram')
 require('extensions/class-diagram')
 

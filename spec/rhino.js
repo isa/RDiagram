@@ -1,6 +1,8 @@
 
 load('./spec/lib/jspec.js')
 load('./spec/lib/jspec.xhr.js')
+load('./spec/lib/jshamcrest-min.js')
+load('./spec/lib/jsmockito-min.js')
 load('lib/rdiagram.js')
 load('lib/extensions/class-diagram.js')
 

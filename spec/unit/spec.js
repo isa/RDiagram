@@ -1,7 +1,21 @@
 describe 'RDiagram'
     before_each
-        rdiagram = new RDiagram();
+        rdiagram = new RDiagram('canvas', 100, 100);
         extension = new ClassDiagramExtension();
+    end
+    
+    describe 'constructor'
+        it 'should get dom id, width and height'
+            id = 'canvas';
+            width = 1;
+            height = 1;
+            
+            rd = new RDiagram(id, width, height);
+            
+            rd.canvas.id.should.be id
+            rd.canvas.width.should.be width
+            rd.canvas.height.should.be height
+        end
     end
     
     describe 'add_extension(extension)'
@@ -15,19 +29,16 @@ describe 'RDiagram'
     
     describe 'draw(dsl)'
         it 'should call right extension to parse the dsl'
-            var dsl = 'class-diagram { CONTENT }';
             var expected_content = 'CONTENT';
+            var dsl = 'class-diagram { ' + expected_content + ' }';
             
-            function FakeExtension() {
-                this.is_valid = function(token) { return true; },
-                this.draw = function(dsl) { this.content = dsl; }
-            }
+            var fake_extension = JsMockito.mock(ClassDiagramExtension);
+            JsMockito.when(fake_extension).is_valid(JsHamcrest.Matchers.anything()).thenReturn(true);
             
-            var fake_extension = new FakeExtension();
             rdiagram.add_extension(fake_extension);
             rdiagram.draw(dsl);
             
-            fake_extension.content.should.be expected_content
+            JsMockito.verify(fake_extension).draw(expected_content);
         end
     end
 end
